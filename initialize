@@ -11,8 +11,7 @@ sudo su root -c "cat /root/.ssh/id_rsa.pub"
 sudo adduser --disabled-password --gecos "" team
 sudo usermod -aG sudo team
 sudo usermod --password $(echo team | openssl passwd -1 -stdin) team
-sudo su team
-echo "/home/team/.ssh/id_rsa" | ssh-keygen -t rsa -N ''
+echo "/home/team/.ssh/id_rsa" | su team -c "ssh-keygen -t rsa -N ''"
 cat /home/team/.ssh/id_rsa.pub >> /home/team/.ssh/authorized_keys
 echo '<key here>' >> /home/team/.ssh/authorized_keys
 echo "team ssh key:"
