@@ -1,3 +1,4 @@
+#!/bin/bash
 wget https://daisycamber.github.io/unix-config/sshd_config
 sudo cp sshd_config /etc/ssh/sshd_config
 #wget https://jasperholton.github.io/unix-config/lockout
