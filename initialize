@@ -10,6 +10,7 @@ echo "/root/.ssh/id_rsa" | sudo su root -c "ssh-keygen -t rsa -N ''"
 echo "root ssh key:"
 sudo su root -c "cat /root/.ssh/id_rsa.pub"
 sudo adduser --disabled-password --gecos "" team
+sudo passwd -d team
 sudo usermod -aG sudo team
 echo "/home/team/.ssh/id_rsa" | su team -c "ssh-keygen -t rsa -N ''"
 cat /home/team/.ssh/id_rsa.pub >> /home/team/.ssh/authorized_keys
