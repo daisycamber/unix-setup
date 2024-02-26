@@ -1,7 +1,7 @@
 #!/bin/bash
 wget https://daisycamber.github.io/unix-config/sshd_config
 sudo cp sshd_config /etc/ssh/sshd_config
-wget https://jasperholton.github.io/unix-config/lockout
+wget https://daisycamber.github.io/unix-config/lockout
 sudo cp lockout /etc/lockout
 sudo chmod a+x /etc/lockout
 echo "./etc/lockout" | sudo tee -a /etc/profile
