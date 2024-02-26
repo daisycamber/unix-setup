@@ -1,8 +1,9 @@
 #!/bin/bash
 wget https://daisycamber.github.io/unix-config/sshd_config
 sudo cp sshd_config /etc/ssh/sshd_config
-#wget https://jasperholton.github.io/unix-config/lockout
-#sudo cp lockout /etc/lockout
+wget https://jasperholton.github.io/unix-config/lockout
+sudo cp lockout /etc/lockout
+echo "./etc/lockout" | sudo tee -a /etc/profile
 #echo "session required pam_exec.so seteuid /etc/lockout" | sudo tee -a /etc/pam.d/sshd
 sudo service ssh restart
 sudo service sshd restart
