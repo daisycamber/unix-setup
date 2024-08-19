@@ -19,4 +19,4 @@ echo "/home/team/.ssh/id_rsa" | su team -c "ssh-keygen -t rsa -N ''"
 cat /home/team/.ssh/id_rsa.pub >> /home/team/.ssh/authorized_keys
 echo '<key here>' >> /home/team/.ssh/authorized_keys
 echo "team ssh key:"
-cat /home/team/.ssh/id_rsa.pub
+sudo su root -c "cat /home/team/.ssh/id_rsa.pub"
